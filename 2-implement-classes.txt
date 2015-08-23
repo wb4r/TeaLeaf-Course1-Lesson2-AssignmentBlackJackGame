@@ -1,0 +1,62 @@
+Assignment: OO Blackjack - Implement the Classes
+
+Now that you have taken a first stab at the classes and behaviors, 
+implement the classes with code. Think about how to extract common behaviors 
+into your classes and/or modules, and based on what you know about OOP and 
+inheritance, what the consequences of the design are.
+
+In OOP, there are plainly wrong or non-optimal designs, but there will often 
+not be one absolutely "right" design. Try to understand the tradeoffs you're 
+making, and the tradeoffs offered in the solutions, as well.
+
+    class Player 
+        - Dealer and Player (Objects)
+        - Hand (State)
+        - Hit/Stay (Method)
+    class Deck
+        - MotherDeck and inGameDeck (Objects)
+        - Provide card (Method)
+    
+#########
+
+class Deck
+  def initialize 
+    mother deck
+    X-player deck --> inGameDeck
+  end
+  
+  def provide_card
+  end
+end
+
+class Card
+  def initialize
+    Deck::provide_card
+    @suit
+    @value
+  end
+end
+
+class Player(name, hand)
+  def hit
+  end
+  
+  def stay
+  end
+end
+
+class Game
+  def initialize
+    initialize Dealer and Player with name and Hand
+    initialize Deck
+  end
+  
+  def play
+    #create_players (done in initialize)
+    #create_deck (done in initialize)
+    #create space for player cards and used cards (done in player.hand)
+    2.times deck provide card to each player
+    loop hit player
+    loop hit dealer
+  end
+end

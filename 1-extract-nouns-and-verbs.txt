@@ -1,0 +1,27 @@
+Assignment: OO Blackjack - Extract Nouns and Verbs
+
+Write out the requirements of the blackjack game, and extract the major nouns. 
+Use those nouns to then think about abstracting behaviors into Classes. 
+Just use a pen or text editor for this exercise; no coding yet.
+
+## REQUIREMENTS:
+
+In BJ there is a DEALER and at least one PLAYER. We have a DECK of 52 cards of 
+2-DECKs and each PLAYER and DEALER will receive a hand, shown in the table-board. 
+
+We start with 2 shown cards per PLAYER and the DEALER only shows 1. The PLAYER 
+will hit or stay. Hit is asking for another card from the DECK and staying is giving place to 
+the DEALER to hit more cards. The PLAYER has to try to be as closest as possible
+from 21, if it overpasses its game over. When its the DEALER turn he will hit cards 
+from the DECK at least until 17, if it overpasses, the PLAYER wins.
+
+## EXTRACT:
+
+    class Player 
+        - Dealer and Player (Objects)
+        - Hand (State)
+        - Hit/Stay (Method)
+    class Deck
+        - Mother deck and inGameDeck (Objects)
+        - Provide card (Method)
+    

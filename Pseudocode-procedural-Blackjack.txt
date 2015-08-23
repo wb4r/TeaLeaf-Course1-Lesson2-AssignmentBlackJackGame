@@ -1,0 +1,18 @@
+1- Create a Player and a Dealer user
+    - Choose a name and save it
+2- Create a 2-deck deck of cards
+    - symbols = ['♥','♦','♠','♣'] -> hearts, diamonds, spades and clubs
+    - Give value to the cards
+        - For example, A is 11 unless total is > 21
+    - Data structure?
+        card_1: [name],[value], [quantity]
+3- Create a space to save player cards and used cards (3 Hashes)
+4- Create starting rules
+    - Player with 2 cards both uncovered
+    - Dealer with 2 cardes 1 covered
+5- Create a loop per hand with rules
+    - 'hit or stay'
+    - At the end, dealer has to have > 17
+    - If player > 21 games over, no mather what dealer has
+6- Create a loop for replay
+7- Create a physical board

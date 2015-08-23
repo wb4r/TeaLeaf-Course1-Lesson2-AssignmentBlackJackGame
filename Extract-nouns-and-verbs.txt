@@ -1,9 +1,0 @@
-Assignment: OO Blackjack - Extract Nouns and Verbs
-
-Write out the requirements of the blackjack game, and extract the major nouns. 
-Use those nouns to then think about abstracting behaviors into Classes. 
-Just use a pen or text editor for this exercise; no coding yet.
-
-
-
-
