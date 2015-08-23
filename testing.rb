@@ -1,12 +1,29 @@
-SUITS = ['Hearts', 'Diamonds', 'Spades', 'Clubs']
-CARDS = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
-@motherdeck = []
+require 'pry'
 
-def mother_deck(motherdeck)
-  motherdeck = SUITS.product(CARDS)
-  motherdeck.shuffle!
+player_hand = [["Hearts", "J"], ["Diamonds", "A"], ["Spades", "8"]]  
+
+aces = 0
+
+array_of_values = []
+
+player_hand.each_index do |index, sub_array|
+  if player_hand[index][1].to_i != 0
+    array_of_values << player_hand[index][1].to_i
+  elsif player_hand[index][1] == "A"
+    array_of_values << 11
+  else
+    array_of_values << 10
+  end
 end
 
-@inGameDeck = mother_deck(@inGameDeck)
-@inGameDeck = @inGameDeck * 2
-p @inGameDeck
+if array_of_values.inject(:+) > 21 && array_of_values.max == 11
+  array_of_values.delete(11) 
+  array_of_values.replace(array_of_values << 1)
+end
+
+
+
+p array_of_values
+p array_of_values.inject(:+) + aces
+p player_hand
+
