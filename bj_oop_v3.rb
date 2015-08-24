@@ -16,10 +16,6 @@ class Deck
   def provide_card
     @inGameDeck.pop
   end
-  
-  def length
-    @inGameDeck.length
-  end
 end
 
 
@@ -29,10 +25,6 @@ class Card
   def initialize(suit, value)
     @suit = suit
     @value = value
-  end
-  
-  def to_s
-    "Suit: #{suit} - Card: #{value}"
   end
 end
 
