@@ -30,8 +30,7 @@ end
 
 
 class Player
-  attr_reader :name
-  attr_accessor :status
+  attr_accessor :status, :name
   @@number_of_players = 0
   
   def initialize(name, status)
@@ -184,6 +183,7 @@ class Game
   
   def gambler_lost
     blank_line
+    @gambler.name = "Jim 'Sad' Bennett"
     puts "#{@gambler.name} LOST!"
     puts "#{@gambler.name}'s Total: #{@gambler.calculate_total_value_hand}"
     puts "#{@dealer.name}'s Total: #{@dealer.calculate_total_value_hand}"
@@ -214,6 +214,7 @@ class Game
   def reset(gambler, dealer)
     gambler.clear
     dealer.clear
+    @gambler.name = "Jim Bennett"
     @gambler.status = "hit"
   end
   
