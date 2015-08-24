@@ -213,6 +213,8 @@ class Game
       clear_screen
       reset(@gambler.player_hand, @dealer.player_hand)
       play
+    else 
+      puts "Goodbye!"
     end
   end
   
